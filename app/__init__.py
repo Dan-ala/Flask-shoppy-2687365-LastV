@@ -6,6 +6,7 @@ from .config import Config
 from .mi_blueprint import mi_blueprint
 from app.productos import productos
 from flask_bootstrap import Bootstrap
+from app.clientes import clientes
 
 
 #Creacón y configuración de la app
@@ -20,6 +21,7 @@ bootstrap= Bootstrap(app)
 #Configurar y registrar blueprints
 app.register_blueprint(mi_blueprint)
 app.register_blueprint(productos)
+app.register_blueprint(clientes)
 
 #Establecer una configuración para sql admin
 #Crear los objetos de sqlalchemy y migrate

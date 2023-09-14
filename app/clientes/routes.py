@@ -21,7 +21,7 @@ def listar():
     #Traernos los clientes de la db
     clientes = app.Cliente.query.all()
     #Mostramos los clientes a través de una lista solo los clientes seleccionados por la consulta
-    return render_template('listarC.html',
+    return render_template('lis.html',
                            clientes=clientes)
 
 

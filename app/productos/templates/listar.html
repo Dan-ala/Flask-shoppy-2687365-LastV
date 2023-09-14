@@ -11,8 +11,30 @@
             {{ mensaje }}
         </button>
     </div>
-
     {% endfor %}
+
+    <nav class="nav navbar-inverse">
+        <DIV class="container">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/productos/crear">Productos </a>
+                    </li>
+                    <li>
+                        <a href="">Clientes</a>
+                    </li>
+                    {% if current_user.is_authenticated %}
+                    <li>
+                        <a href="/auth/login">Logout</a>
+                    </li>
+                    {% else %}
+                    <li>
+                        <a href="/auth/login">Login</a>
+                    </li>
+                    {% endif %}
+                </ul>
+        </DIV>
+        
+        </nav>
 
     <h1>Lista de Productos</h1>
     <table class="table table-bordered">
